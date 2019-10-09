@@ -73,6 +73,13 @@ const phoneBookArray = [
 ];
 const findByName = (name) => phoneBookArray.find(phoneBookArray => phoneBookArray.name === name).phone;
 console.log(findByName('Marcus'));
+// Find by name via for loop
+const findByNameLoop = (name) => {
+    for (const item of phoneBookArray)
+        if (item.name === name) return item.phone;
+};
+console.log(findByNameLoop('Antonius'));
 /*
  Collections: Hash (Object)
+ TODO
  */
