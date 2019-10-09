@@ -66,20 +66,24 @@ console.log(createUser('Vlad', 'Kyiv'));
 /*
  Collections: Array
  */
-const phoneBookArray = [
+const phonebook = [
     {name: 'Marcus', phone: '+38011111'},
     {name: 'Antonius', phone: '+38022222'},
     {name: 'Yulius', phone: '+38033333'}
 ];
-const findByName = (name) => phoneBookArray.find(phoneBookArray => phoneBookArray.name === name).phone;
-console.log(findByName('Marcus'));
+const findPhoneByName = (name) => phonebook.find(phoneBookArray => phoneBookArray.name === name).phone;
+console.log(findPhoneByName('Marcus'));
 // Find by name via for loop
-const findByNameLoop = (name) => {
-    for (const item of phoneBookArray)
+const findPhoneByNameLoop = (name) => {
+    for (const item of phonebook)
         if (item.name === name) return item.phone;
 };
-console.log(findByNameLoop('Antonius'));
+console.log(findPhoneByNameLoop('Antonius'));
 /*
  Collections: Hash (Object)
- TODO
- */
+*/
+const findPhoneHashByNameLoop = (name) => {
+    for (const item of phonebook)
+        if (item['name'] === name) return item['phone'];
+};
+console.log(findPhoneHashByNameLoop('Antonius'));
